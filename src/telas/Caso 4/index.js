@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
 
+const A = React.memo(() => {
+    console.log(`Render A`)
+    return (
+        <span> A </span>
+    )
+});
+
+
+
+
+
 export default (props) => {
     const [cont, setCont] = useState(0);
-    const A = React.useMemo(() => {
-        console.log(`Render A`)
-        return (
-            <span> A </span>
-        )
-    }, []);
-
 
     console.log('Render Container')
-
     return (
         <>
             <div>
@@ -22,7 +25,7 @@ export default (props) => {
                 <button onClick={() => setCont(c => c + 1)} >Aumentar</button>
 
                 {cont % 2 == 1 && (
-                    <div>{A}</div>
+                    <div> <A /></div>
                 )}
             </div>
         </>
