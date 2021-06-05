@@ -1,5 +1,5 @@
 import React from 'react';
-import Caso from './telas/Caso 2';
+import Caso from './telas/Caso';
 
 import {
   BrowserRouter,
