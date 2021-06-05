@@ -1,5 +1,5 @@
 import React from 'react';
-import Caso1 from './telas/Caso 1';
+import Caso from './telas/Caso 2';
 
 import {
   BrowserRouter,
@@ -11,7 +11,7 @@ const App = props => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact={true} component={Caso1}/>
+        <Route path="/" exact={true} component={Caso}/>
       </Switch>
     </BrowserRouter>
   );
